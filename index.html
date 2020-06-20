@@ -23,51 +23,70 @@
 		}
 
 		body {
-		    font-family: DM Sans;
+		    font-family: DM sans;
 			font-style: normal;
 			color: #04172A;
 		}
 
 		header {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			padding: 10px 10px;
-			margin-bottom: 4.6em;
-			height: 15vh;
+			position: absolute;
+			height: 100px;
 			left: 0;
 			right: 0;
 			top: 0;
 			background: #C4C4C4; 
 		}
+		
+		nav {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 1em;
+			align-items: center;
+			flex: 0 0 auto;
+			max-width: 80%;
+			max-height: 50%;
+		}
+
+		nav:nth-child(1) {
+			margin-right: auto; 
+			margin-left: auto;
+		}
 
 		 h1 {
-			position: absolute;
-			width: 308px;
-			height: 52px;
-			left: calc(50% - 308px/2 - 425px);
-			top: 27px;
 			font-family: inherit;
 			font-style: inherit;
 			font-weight: 500;
-			font-size: 50px;
+			font-size: 40px;
 			line-height: 52px;
 			color: #04172A;
 		}
 
-		.empty-white-box {
-			position: absolute;
-			width: 169px;
-			height: 73px;
-			left: 1131px;
-			top: 17px;
+		.logo {
+			text-decoration: none;
+			border-bottom: none;
+		}
+
+		.big-rec {
+			margin-top: 1em;
+			width: 130px;
+			height: 63px;
 			background: #E7E7E7;
+		}
+
+		.small-rec {
+			position: relative;
+			width: 100px;
+			height: 35px;
+			left: 16px;
+			top: 15px;
+			background: #C4C4C4;
 		}
 
 
 		.flex-container {
 			display: flex;
 			flex-direction: column;
+			margin-top: 7.6em !important;
 			max-width: 770px;
 			margin: auto;
 			padding: 1em;
@@ -92,7 +111,7 @@
 			font-family: inherit;
 			font-style: inherit;
 			font-weight: 600;
-			font-size: 20px;
+			font-size: 22px;
 			line-height: 26px;
 			margin-bottom: 0.8em;
 		}
@@ -172,20 +191,34 @@
 			line-height: 31px;
 		}
 
+		.fa-edit:hover {
+			cursor: pointer;
+		}
+
 		button {
 			width: 300px;
 			height: 72px;
 			background: #FB3F5C;
 			box-shadow: 5px 5px 25px rgba(255, 29, 114, 0.2);
 			border-radius: 10px;
+			margin-top: 2.2em;
+		}
+
+		button:hover {
+			cursor: pointer;
 		}
 
 		.btn > h3 {
+			font-family: inherit;
+			font-style: inherit;
+			font-weight: 500;
+			font-size: 32px;
+			line-height: 42px;
 			color: #ffffff;
 		}
 
 		footer {
-			height: 15vh;
+			height: 100px;
 			left: 0;
 			right: 0;
 			bottom: 0;
@@ -199,12 +232,14 @@
 
 	<!--Header section goes in here-->
 	<header>
-		<div class="brand-name">
+		<nav>		
+		  <div class="brand-name">
 			<a href="#" class="logo"><h1>FundMy<span class="color-text">Laptop</span></h1></a>
-		</div>
-		<div class="empty-white-box">
-			<!--empty white box-->
-		</div>
+		  </div>
+		  <div class="big-rec">
+			<div class="small-rec"></div>
+		  </div>
+	   </nav>
 	</header>
 
 
@@ -214,7 +249,7 @@
 			<div class="grid">
 				<div class="column">
 					<div class="user-header">
-						<img class="user-img" src="./Ellipse 10.png">
+						<img class="user-img" src="user-profile-img.png" alt="user-profile-img">
 						<div class="user-title">		
 							<h2>John Doe</h2>
 							<p class="user-role">Front End Developer</p>
@@ -229,7 +264,7 @@
 
 				<div class="column about">
 					<h4>ABOUT</h4>
-					<p>I am a proactive, diligent, honest, hardworker with passion for web development. I have over 5 year cummulative experience working in a fintech company in Lagos State, Nigeria.</br>I like to play football and sing.</p>
+					<p>I am a proactive, diligent, honest, hardworker with passion for web development. I have</br> over 5 year cummulative experience working</br> in a fintech company in Lagos State, Nigeria.</br>I like to play football and sing.</p>
 				</div>	
 
 				<div class="column contact">
